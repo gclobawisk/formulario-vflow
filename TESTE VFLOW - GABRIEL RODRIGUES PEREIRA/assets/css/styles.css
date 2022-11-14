@@ -1,0 +1,9 @@
+.bordas{
+    border: 2px gray solid;
+    border-left: 5px 	rgb(2, 117, 216) solid;
+    border-top: none;
+  }
+
+  input[type='file'] {
+    display: none;
+}

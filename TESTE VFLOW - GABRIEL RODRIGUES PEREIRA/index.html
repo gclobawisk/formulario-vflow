@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Cadastro de Clientes</title>
+</head>
+
+
+<body>
+
+    <h1 class="text-center">Cadastro Cliente / Produto</h1>
+
+    <div class="container my-5 bg-secondaryy shadow-lg p-3 mb-5 bg-white rounded">
+        <form class="row g-3 p-2">
+          
+
+          <div class="row pb-3 bg-dangerr mx-auto bordas border-top">
+
+              <div class="pt-2">
+                <h6> A Solicitante </h6>
+              </div>
+
+              <div class="col-md-4">
+                  <label class="form-label">Data Solicitação</label>
+                  <input type="date" class="form-control bg-light" id="inputData" value="" readonly> 
+              </div>
+
+              <div class="col-md-4">
+                  <label class="form-label">Nome</label>
+                  <input type="text" class="form-control bg-light" id="inputNomeSolicitante" value="Gabriel" readonly>
+              </div>
+
+              <div class="col-md-4">
+                  <label class="form-label">Area Comercial</label>
+                  <input type="text" class="form-control bg-light" id="inputArea" value="Comércio" readonly>
+              </div>
+
+          </div>
+
+          
+
+              <div class="bg-primaryy text-dark bordas bg-primary border-bottom-0">
+                <h6 class="text-white pt-2"> Dados do Fornecedor </h6>
+              </div>
+
+              <div class="row pb-3 mx-auto bg-successs bordas">
+
+                <div class="col-md-8">
+                  <label class="form-label">Razão Social</label>
+                  <input type="text" class="form-control" id="inputRazaoSocial1">
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">CNPJ</label>
+                  <input type="text" class="form-control" id="inputCNPJ1">
+                </div>
+
+                <div class="col-md-8">
+                  <label class="form-label">Nome Fantasia</label>
+                  <input type="text" class="form-control" id="inputNomeFantasia1">
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">Inscrição Estadual</label>
+                  <input type="number" class="form-control" id="inputInscricaoEstadual1">
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">CEP</label>
+                  <input type="text" class="form-control" id="inputCEP1" value="" onmouseout="retornarCep()">
+                </div>
+
+                <div class="col-md-4"><br>
+                  <label class="form-label"></label>
+                  <div id="retornoCepInvalido" class="text-danger text-weight"> </div>
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">Inscrição Municipal</label>
+                  <input type="number" class="form-control" id="inputInscricaoMunicipal1" >
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Endereço</label>
+                  <input type="text" class="form-control" id="inputEndereco1" value="" >
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">Complemento</label>
+                  <input type="text" class="form-control" id="inputComplemento1" value="">
+                </div>
+
+                <div class="col-md-2">
+                  <label class="form-label">Número</label>
+                  <input type="number" class="form-control" id="inputNumero1" value="" >
+                </div>
+
+
+                <div class="col-md-6">
+                  <label class="form-label">Bairro</label>
+                  <input type="text" class="form-control" id="inputBairro1" value="" >
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">Estado</label>
+                  <input type="text" class="form-control" id="inputEstado1" value="">
+                </div>
+
+                <div class="col-md-2">
+                  <label class="form-label">Município</label>
+                  <input type="text" class="form-control" id="inputMunicipio1" value="" >
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Nome da Pessoa de Contato</label>
+                  <input type="text" class="form-control" id="inputPessoaContato1" value="" >
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">Telefone</label>
+                  <input type="text" class="form-control" id="inputTelefone1" value="">
+                </div>
+
+                <div class="col-md-2">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail1" value="" >
+                </div>
+
+                
+              </div>
+
+
+                <div class="bg-primary border-bottom-0">
+                  <h6 class="text-white pt-2"> Produtos </h6>
+                </div>
+
+                <div class="row g-3 pb-3 mx-auto mt-0 bordas">
+                  
+                    <div class="text-end"><b class="btn btn-success text-end my-1" onclick="adcElemento()"><i class="fa-solid fa-plus">Incluir Item</i></b></div>              
+
+                      <div id="elementosAdicionais" class="">
+                      </div>
+                    
+                </div>
+
+
+                <div class="bordas bg-primary border-bottom-0">
+                  <h6 class="text-white pt-2"> Anexos </h6>
+                </div>
+
+                
+                <div class="row g-3 bg-info pb-3 mx-auto mt-0 bordas border-bottom-0">
+                  <div class="text-end"><input type="file" id="myFileInput" class="btn btn-primary text-end my-1"><button onclick="event.preventDefault()" class="btn btn-primary" id="iconInput"><i class="fa-solid fa-plus">Anexar</i></button></div>              
+
+                      <div id="arquivosAnexados" class="">
+                        <p id="arquivosMensagem"> <p>
+                      </div>
+
+                </div>
+
+                
+              
+                
+                <div class="">
+                  <button class="btn btn-primary" type="submit" onclick="save()" id="enviar">Enviar</button>
+                </div>
+
+  
+          </form>
+    </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Status do Envio</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">   
+      
+        
+        <div class="text-center">
+          <div id="respostaModal"></div>
+          <img src="assets/img/sucesso.png" alt="" class="justify-content-center" style="width:300px;">
+
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/viacep.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
